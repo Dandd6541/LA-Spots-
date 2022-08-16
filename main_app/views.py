@@ -1,3 +1,9 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
+# Define the home view
+def home(request):
+  return HttpResponse('<h1>Hello /ᐠ｡‸｡ᐟ\ﾉ</h1>')
 # Create your views here.
+def about(request):
+  return HttpResponse('<h1>About the Cat Colelctor</h1>')
