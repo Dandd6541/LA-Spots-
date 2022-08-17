@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    font-family: Helvetica;
+    color: #ff00aa;
+  }
+  
+  body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas: 
+      "nav"
+      "main"
+  }
+  
+  nav > img {
+    width: 34px;
+    object-fit: contain;
+    margin-right: auto;
+  }
+  
+  body > main {
+    grid-area: main;
+    display: flex;
+    align-items: center;
+    background-color: #00fac4;
+
+  }
+  
+  
+  .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 34px;
+  }
+  
+  .login img {
+    height: 30px;
+  }
+  
+  
+  
+  
