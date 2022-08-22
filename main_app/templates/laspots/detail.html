@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>laspot Details</h1>
+
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">{{ laspot.name }}</span>
+    <p>Breed: {{ laspot.breed }}</p>
+    <p>Description: {{ laspot.description|linebreaks }}</p>
+    {% if laspot.age > 0 %}
+      <p>Age: {{ laspot.age }}</p>
+    {% else %}
+      <p>Age: Kitten</p>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}

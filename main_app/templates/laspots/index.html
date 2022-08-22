@@ -5,6 +5,8 @@
 
 {% for laspot in laspots %}
   <div class="card">
+    <a href="{% url 'detail' laspot.id %}">
+    </a>
     <div class="card-content">
       <span class="card-title">{{ laspot.name }}</span>
       <p>Breed: {{ laspot.breed }}</p>
@@ -16,6 +18,8 @@
       {% endif %}
     </div>
   </div>
+   </a>
+</div>
 {% endfor %}
 
 {% endblock %}

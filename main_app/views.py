@@ -17,3 +17,7 @@ def laspots_index(request):
   laspots = Laspot.objects.all()
   return render(request, 'laspots/index.html', { 'laspots': laspots })
 
+
+def laspots_detail(request, laspot_id):
+  laspot = Laspot.objects.get(id=laspot_id)
+  return render(request, 'laspots/detail.html', { 'laspot': laspot })
