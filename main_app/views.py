@@ -1,5 +1,5 @@
 from django.shortcuts import render 
-from django.http import HttpResponse
+from .models import Laspot
 
 # Add the Cat class & list and view function below the imports
 class Laspot:  # Note that parens are optional if not inheriting from another class
@@ -15,13 +15,17 @@ laspots_index = [
   Laspot('Raven', 'black tripod', '3 legged cat', 4)
 ]
 
+def laspots_index(request):
+  laspots = Laspot.objects.all()
+  return render(request, 'laspots/index.html', { 'laspots': laspots })
+  
 # Define the home view
 def home(request):
-  return HttpResponse('<h1>Hello /ᐠ｡‸｡ᐟ\ﾉ</h1>')
+  return render(request, 'home.html')
 # Create your views here.
 def about(request):
   return render(request, 'about.html')
 
 # Add new view
-def laspots_index(request):
-  return render(request, 'laspots/index.html', { 'laspots': laspots_index })
+
+
