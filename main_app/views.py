@@ -1,7 +1,12 @@
 from django.shortcuts import render 
+from django.views.generic.edit import CreateView
 from .models import Laspot
 
-# Add the Cat class & list and view function below the imports
+# Add the LA SPOTS class & list and view function below the imports
+
+class LaspotCreate(CreateView):
+  model = Laspot
+  fields = ['name', 'breed', 'description', 'age']
 
   
 # Define the home view
